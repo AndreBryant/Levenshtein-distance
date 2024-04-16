@@ -1,3 +1,3 @@
 import Levenshtein from "./Levenshtein.js"
 
-console.log(Levenshtein.distance('adnre', 'andre'))
+console.log(Levenshtein.distance('lex', 'hack'))

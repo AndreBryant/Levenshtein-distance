@@ -10,15 +10,12 @@ const Levenshtein = {
         } else if (this.head(a) === this.head(b)) {
             return this.distance(this.tail(a), this.tail(b));
         } else {
-            return this.I(i, j) + Math.min(
+            return 1 + Math.min(
                 this.distance(this.tail(a), b),
                 this.distance(a, this.tail(b)),
                 this.distance(this.tail(a), this.tail(b))
             );
         }
-    },
-    I(n, m) {
-        return n === m ? 1 : 0;
     },
     tail(s) {
         return s.substring(1);
